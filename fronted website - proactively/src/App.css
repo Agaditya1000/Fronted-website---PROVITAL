@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+body{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+.mainContainer {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  padding: 0px 0px !important;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.contentSection {
+  display: flex;
+  gap: 20px;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 18%;
+}
+
+.dividertest {
+  position: relative; 
+  z-index: 35;
+  top: 0px;
+  left: 0;
+  width: 97%;
+  height: 210px;
+  background-color: #fff; 
+  transform: rotate(-3deg); 
+  transform-origin: left;
+}
+
+.dividertest::before {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: 0;
+  width: 120%;
+  overflow: hidden;
+  height: 50px; 
+  background: linear-gradient(90deg, #F0C971, #E5688C);  
+  z-index: -1;
+}
+
+
+
+
+.topImage,
+.bottomImage {
+  aspect-ratio: 0.7;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.bottomImage {
+  margin-top: 19px;
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 82%;
+  margin-left: 20px;
+}
+
+.infoWrapper {
+  display: flex;
+  margin-top: 67px;
+  width: 100%;
+  padding-bottom: 24px;
+  flex-direction: column;
+}
+
+.mainTitle {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  font-family: Inter, sans-serif;
+}
+
+.lightText {
+  font-weight: 500;
+}
+
+.boldText {
+  font-weight: 600;
+  line-height: 53px;
+}
+
+.description {
+  color: #707070;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 24px 32px 0 0;
+  font-family: Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .mainContainer {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .contentSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .imageColumn,
+  .infoColumn {
+    width: 100%;
+  }
+
+  .infoWrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .mainTitle,
+  .description {
+    max-width: 100%;
+  }
+
+  .description {
+    margin-right: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dividertest{
+    display: none;
+  }
+}
